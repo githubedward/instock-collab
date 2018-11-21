@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import logo from './logo.svg';
 import './styles/App.css';
 import {BrowserRouter as Router, Route, withRouter, Switch, Redirect} from 'react-router-dom';
+import NavbarSidebar from './Components/NavbarSidebar';
 import warehouseList from './Components/warehouseList';
 import inventoryList from './Components/inventorylist';
 import warehouse from './Components/warehouse';
@@ -15,7 +16,7 @@ class App extends Component {
       <div className="App">
         <Router>
           <div>
-            <Nav />
+            <NavbarSidebar />
             <Switch>
               <div className='main'>
                 <Route path='/warehouseList' component = { warehouseList }/>
