@@ -22,22 +22,22 @@ app.use(bodyParser.json());
 // callback routing methods
 callback = {
     // get list of warehouses
-    getAllWarehouses: {
+    getAllWarehouses: (req, res, next) => {
         // insert your code here
     },
-    getAllInventory: {
+    getAllInventory: (req, res, next) => {
         // insert your code here
     },
-    getWarehouseInventory: {
+    getWarehouseInventory: (req, res, next) => {
         // insert your code here
     },
-    getInventory: {
+    getInventory: (req, res, next) => {
         // insert your code here
     },
-    createNewWarehouse: {
+    createNewWarehouse: (req, res, next) => {
         // insert your code here
     },
-    deleteItem: {
+    deleteItem: (req, res, next) => {
         // insert your code here
     }
 }
