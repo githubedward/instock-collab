@@ -57,5 +57,3 @@ app.route('/inventory/:invId')
 app.listen(port1, () => {
     console.log(`Hey human, CORS-enabled server is now running at port ${port1} 😏`)
 })
-
-// functions
