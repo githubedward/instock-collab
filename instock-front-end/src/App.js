@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
 import './styles/App.css';
+<<<<<<< HEAD
 import {BrowserRouter as Router, Route, withRouter, Switch, Redirect} from 'react-router-dom';
 <<<<<<< HEAD
 import NavbarSidebar from './Components/NavbarSidebar';
@@ -18,6 +18,14 @@ import Inventory from './Components/inventory';
 import Users from './Components/users';
 import User from './Components/user';
 >>>>>>> 0f519b7e38a4e0ec44dc51f0911479680da8872a
+=======
+import {BrowserRouter as Router, Route, withRouter, Switch, Redirect, Link } from 'react-router-dom';
+import WarehouseList from './Components/WarehouseList';
+import InventoryList from './Components/AllInventoryList';
+// import Inventory from './Components/inventory';
+// import Users from './Components/users';
+// import User from './Components/user';
+>>>>>>> abb0755ad9819a58c031bb0126676dfb067ac27a
 
 class App extends Component {
   state = {
@@ -84,17 +92,21 @@ class App extends Component {
       <div className="App">
         <Router>
           <div>
+<<<<<<< HEAD
             <NavbarSidebar />
+=======
+            {/* <Nav /> */}
+>>>>>>> abb0755ad9819a58c031bb0126676dfb067ac27a
             <Switch>
               <div className='main'>
                 <Route path='/warehouseList' render={(props) => 
                 {return <WarehouseList {...props} warehouseArray={this.state.warehouse}/>}}/>
                 <Route path='/inventoryList' render={(props) => 
                 {return <InventoryList {...props} inventoryArray={this.state.inventory}/>}}/>
-                <Route path='/warehouses/:id' component = { Warehouse } />
-                <Route path='/inventory/:id' component = { Inventory } />
-                <Route path='/users' component = { Users } />
-                <Route path='/users/id' component = { User }/>
+                {/* <Route path='/warehouses/:id' component = { Warehouse } /> */}
+                {/* <Route path='/inventory/:id' component = { Inventory } /> */}
+                {/* <Route path='/users' component = { Users } /> */}
+                {/* <Route path='/users/id' component = { User }/> */}
               </div>
             </Switch>
           </div>
