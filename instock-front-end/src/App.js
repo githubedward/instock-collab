@@ -1,19 +1,18 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
 import './styles/App.css';
 import {BrowserRouter as Router, Route, withRouter, Switch, Redirect} from 'react-router-dom';
-import warehouseList from './Components/warehouseList';
-import inventoryList from './Components/inventorylist';
-import warehouse from './Components/warehouse';
-import inventory from './Components/inventory';
-import users from './Components/users';
-import user from './Components/user';
+// import warehouseList from './Components/warehouseList';
+import InventoryList from './Components/AllInventoryList';
+// import warehouse from './Components/warehouse';
+// import inventory from './Components/inventory';
+// import users from './Components/users';
+// import user from './Components/user';
 
 class App extends Component {
   render() {
     return (
       <div className="App">
-        <Router>
+        {/* <Router>
           <div>
             <Nav />
             <Switch>
@@ -27,7 +26,8 @@ class App extends Component {
               </div>
             </Switch>
           </div>
-        </Router>
+        </Router> */}
+        <InventoryList />
       </div>
     );
   }
