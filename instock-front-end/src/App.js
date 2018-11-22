@@ -1,31 +1,11 @@
 import React, { Component } from 'react';
 import './styles/App.css';
-<<<<<<< HEAD
-import {BrowserRouter as Router, Route, withRouter, Switch, Redirect} from 'react-router-dom';
-<<<<<<< HEAD
-import NavbarSidebar from './Components/NavbarSidebar';
-import warehouseList from './Components/warehouseList';
-import inventoryList from './Components/inventorylist';
-import warehouse from './Components/warehouse';
-import inventory from './Components/inventory';
-import users from './Components/users';
-import user from './Components/user';
-=======
-import WarehouseList from './Components/warehouseList';
-import InventoryList from './Components/AllInventoryList';
-import Warehouse from './Components/warehouseList';
-import Inventory from './Components/inventory';
-import Users from './Components/users';
-import User from './Components/user';
->>>>>>> 0f519b7e38a4e0ec44dc51f0911479680da8872a
-=======
 import {BrowserRouter as Router, Route, withRouter, Switch, Redirect, Link } from 'react-router-dom';
 import WarehouseList from './Components/WarehouseList';
 import InventoryList from './Components/AllInventoryList';
 // import Inventory from './Components/inventory';
 // import Users from './Components/users';
 // import User from './Components/user';
->>>>>>> abb0755ad9819a58c031bb0126676dfb067ac27a
 
 class App extends Component {
   state = {
@@ -92,11 +72,7 @@ class App extends Component {
       <div className="App">
         <Router>
           <div>
-<<<<<<< HEAD
-            <NavbarSidebar />
-=======
             {/* <Nav /> */}
->>>>>>> abb0755ad9819a58c031bb0126676dfb067ac27a
             <Switch>
               <div className='main'>
                 <Route path='/warehouseList' render={(props) => 
