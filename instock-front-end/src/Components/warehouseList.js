@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import {Link} from 'react-router-dom';
 
-export default class warehouseList extends Component {
+export default class WarehouseList extends Component {
   render() {
     let warehouseData = (data)=>{
       return (

@@ -12,30 +12,7 @@ import Navbar from './Components/Navbar';
 
 class App extends Component {
   state = {
-    inventory: [{
-      id: 1,
-      product: 'Product 1',
-      date: '05/24/2018',
-      location: 'Toronto, CAN',
-      quantity: '12,000',
-      status: 'In Stock'
-    },
-    { 
-     id: 2,
-    product: 'Product 2',
-    date: '05/24/2018',
-    location: 'Toronto, CAN',
-    quantity: '12,000',
-    status: 'In Stock'
-    },
-    {
-      id: 1,
-      product: 'Product 3',
-      date: '05/24/2018',
-      location: 'Toronto, CAN',
-      quantity: '12,000',
-      status: 'In Stock'
-    }],
+    inventory: [],
     warehouse: [{
       id: 1,
       title: 'Warehouse 1',
@@ -70,20 +47,27 @@ class App extends Component {
       inventory: 'Industrial, Automotive, Heavy Industry'
     }
   ]};
+
+  getInventoryData = (data) => {
+    this.setState({
+      inventory: data
+    })
+  }
+
   render() {
     return (
       <div className="App">
         <Router>
           <div>
             <Navbar />
+            <Header />
             <div className='main'>
-              <Header />
               <Switch>
                   <Route path='/' exact render={() => <Redirect to='/warehouseList' />} />
                   <Route path='/warehouseList' render={(props) => 
                   {return <WarehouseList {...props} warehouseArray={this.state.warehouse}/>}}/>
                   <Route path='/inventoryList' render={(props) => 
-                  {return <InventoryList {...props} inventoryArray={this.state.inventory}/>}}/>
+                  {return <InventoryList {...props} inventoryArray={this.state.inventory} getInventoryData={this.getInventoryData}/>}}/>
                   {/* <Route path='/warehouses/:id' component = { Warehouse } /> */}
                   {/* <Route path='/inventory/:id' component = { Inventory } /> */}
                   {/* <Route path='/users' component = { Users } /> */}

@@ -3,6 +3,7 @@ const bodyParser = require('body-parser');
 const uuidv4 = require('uuid/v4');
 const morgan = require('morgan');
 const cors = require('cors');
+const inventoryData = require('./data/inventoryData.json');
 
 const app = express();
 const port1 = 8080;
@@ -28,6 +29,8 @@ callback = {
     },
     getAllInventory: (req, res, next) => {
         // insert your code here
+        res.json(inventoryData);
+
     },
     getWarehouseInventory: (req, res, next) => {
         // insert your code here

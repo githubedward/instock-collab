@@ -14,7 +14,7 @@ $h4: 14 / 16 + rem;
 $h5: 12 / 16 + rem;
 
 // main component widths
-$right: 82vw;
+$right: 80vw;
 $left: 18vw;
 
 // mixins
@@ -22,12 +22,74 @@ $left: 18vw;
     cursor: pointer;
 }
 
+@font-face {
+  font-family: 'Avenir Next';
+  font-weight: 400;
+  src: url('../fonts/Avenir-Next.ttc') format('truetype');
+}
 
-// @font-face {
-//   font-family: 'Avenir Next';
-//   font-weight: 400;
-//   src: url('./Assets/Typography/Avenir Next.ttc') format('truetype');
-// }
+body{
+  font-family: 'Avenir Next';
+}
+
+.inventoryList {
+  background-color: #F7F7F7;
+  position: absolute;
+  top: 7rem;
+  left: 19vw;
+  width: 80vw;
+  min-height: 100vh;
+}
+
+.tableContainer {
+  width: 100%;
+
+  table {
+    border: solid 2px #CACACA;
+    border-collapse: collapse;
+    width: 100%;
+    text-align: center; 
+    height: 100%;
+    
+    thead > tr {
+    background-color: white;
+    border-collapse: collapse;
+    text-align: center;
+    height: 15vh;
+  }
+  
+  .product {
+
+    h4 {
+      margin-bottom: 0;
+      color: $light-blue;
+    }
+
+    p {
+      margin-top: 0;
+      color: $background-grey;
+    }
+  }
+
+  // tbody > tr:nth-child(1n){
+  //   background-color: #ADADAD;
+  //   margin: 0;
+  // }
+
+  tbody > tr:nth-child(2n){
+    background-color: white;
+    margin: 0;
+    min-height: 5vh;
+  }
+
+  td {
+    margin: 0;
+    border-collapse: collapse;
+    height: 15vh;
+  }
+  
+}
+}
 
 // global rulesets
 * {
@@ -47,7 +109,7 @@ $left: 18vw;
 .main {
     background-color: $background-grey; 
     width: $right;
-    position: fixed;
+    position: relative;
     top: 0px;
     right: 0px;
 }
@@ -56,11 +118,15 @@ $left: 18vw;
 .header {   
     height: 6rem;
     background-color: #FFFFFF;
-
+    position: fixed;
+    top: 0px;
+    right: 0px;
+    z-index: 99;
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 0 8rem 0 5rem;
+    width: $right;
 
     &-search {
         position: relative;
@@ -165,4 +231,4 @@ $left: 18vw;
             }
         }
     }
-}
+  }
