@@ -25,6 +25,7 @@ callback = {
     // get list of warehouses
     getAllWarehouses: (req, res, next) => {
         // insert your code here
+        // res.send('all warehouses')
     },
     getAllInventory: (req, res, next) => {
         // insert your code here

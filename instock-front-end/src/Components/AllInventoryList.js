@@ -4,7 +4,7 @@ export default class AllInventoryList extends Component {
     componentDidMount() {
         fetch("http://localhost:8080/inventory")
           .then( (response) => response.json())
-          .then(data => this.props.inventoryData(data));
+          .then(data => this.props.getInventoryData(data));
           };
       
     
@@ -12,7 +12,7 @@ export default class AllInventoryList extends Component {
         return (
             <div className='inventoryList'>
                 <div className='inventoryContainer'>
-                    <h1>Inventory</h1>
+                    {/* <h1>Inventory</h1> */}
                     <div className='tableContainer'>
                         <table>
                             <thead>
