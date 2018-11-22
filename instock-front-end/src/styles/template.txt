@@ -1,0 +1,22 @@
+
+
+.navbar {
+    &-search {
+        &__input {
+            input {
+
+            }
+        }
+        &__icon {
+            
+        }
+    }
+    &-profile {
+        &__avatar {
+
+        }
+        &__dropdown {
+            
+        }
+    }
+}

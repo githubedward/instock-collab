@@ -2,7 +2,7 @@ import React, { Component } from 'react'
 import {Link} from 'react-router-dom';
 import axios from 'axios';
 
-export default class warehouseList extends Component {
+export default class WarehouseList extends Component {
   componentDidMount() {
     fetch('http://localhost:8080/inventory')
       .then((response) => response.json())
