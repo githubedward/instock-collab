@@ -1,7 +1,13 @@
 import React, { Component } from 'react'
 import {Link} from 'react-router-dom';
+import axios from 'axios';
 
 export default class warehouseList extends Component {
+  componentDidMount() {
+    fetch('http://localhost:8080/inventory')
+      .then((response) => response.json())
+      .then(data => this.props.getWarehouseData(data));
+      };
   render() {
     let warehouseData = (data)=>{
       return (

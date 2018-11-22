@@ -7,6 +7,8 @@ const cors = require('cors');
 const app = express();
 const port1 = 8080;
 
+const warehouseData = require('./warehouseData')
+
 const api_key = ['badgers', 'david', 'edward', 'scott'];
 
 // middlewares
@@ -23,7 +25,7 @@ app.use(bodyParser.json());
 callback = {
     // get list of warehouses
     getAllWarehouses: (req, res, next) => {
-        // insert your code here
+        res.json(warehouseData)
     },
     getAllInventory: (req, res, next) => {
         // insert your code here

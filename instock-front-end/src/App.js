@@ -67,6 +67,13 @@ class App extends Component {
       inventory: 'Industrial, Automotive, Heavy Industry'
     }
   ]};
+
+  getWarehosueData= (data) => {
+    this.setState({
+      warehouse: data
+    })
+  }
+
   render() {
     return (
       <div className="App">
@@ -76,7 +83,7 @@ class App extends Component {
             <Switch>
               <div className='main'>
                 <Route path='/warehouseList' render={(props) => 
-                {return <WarehouseList {...props} warehouseArray={this.state.warehouse}/>}}/>
+                {return <WarehouseList {...props} getWarehouseData={this.getWarehouseData} warehouseArray={this.state.warehouse}/>}}/>
                 <Route path='/inventoryList' render={(props) => 
                 {return <InventoryList {...props} inventoryArray={this.state.inventory}/>}}/>
                 {/* <Route path='/warehouses/:id' component = { Warehouse } /> */}
