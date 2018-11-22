@@ -1,10 +1,168 @@
+
+
+// colors
 $dark-blue: #003B77;
 $light-blue: #004892;
 $darkest-grey: #3A3A3A;
-$background-grey: #DEDEDE;
+$background-grey: #F7F7F7;
+
+// font size
+$h1: 24 / 16 + rem;
+$h2: 18 / 16 + rem;
+$h3: 1rem;
+$h4: 14 / 16 + rem;
+$h5: 12 / 16 + rem;
+
+// main component widths
+$right: 82vw;
+$left: 18vw;
+
+// mixins
+@mixin pointer {
+    cursor: pointer;
+}
+
 
 // @font-face {
 //   font-family: 'Avenir Next';
 //   font-weight: 400;
 //   src: url('./Assets/Typography/Avenir Next.ttc') format('truetype');
 // }
+
+// global rulesets
+* {
+    margin: 0px;
+    -moz-box-sizing: border-box; 
+    -webkit-box-sizing: border-box; 
+    box-sizing: border-box;
+
+    font-family: arial, sans-serif; /* TEMPORARY */
+}
+
+// component rulesets
+.App {
+    position: relative;
+}
+
+.main {
+    background-color: $background-grey; 
+    width: $right;
+    position: fixed;
+    top: 0px;
+    right: 0px;
+}
+
+// navbar
+.header {   
+    height: 6rem;
+    background-color: #FFFFFF;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 8rem 0 5rem;
+
+    &-search {
+        position: relative;
+        display: flex;
+        align-items: center;
+
+        &__input {
+            width: 381 / 16 + rem;
+            height: 40 / 16 + rem;
+            input {
+                width: inherit;
+                height: inherit;
+                padding-left: 1rem;
+                font-size: $h4;
+                border-radius: 2px;
+                border: 1px solid #CACACA;
+                background-color: #F7F7F7;
+                &:focus {
+                    border: 1px solid $light-blue;
+                    outline: none;
+                }
+            }
+        }
+        &__icon {
+            position: absolute;
+            right: .5rem;
+            padding: .25rem;
+            border-radius: 25%;
+            &:hover {
+                background-color: #CACACA;
+                @include pointer;
+            }
+        }
+    }
+    &-profile {
+        display: flex;
+        align-items: center;
+
+        &__avatar {
+            border-radius: 50%;
+            width: 36 / 16 + rem;
+            margin-right: .75rem;
+        }
+        &__dropdown {
+            padding: .75rem;
+            
+            &:hover {
+                background-color: #CACACA;
+                border-radius: 3px;
+                @include pointer;
+            }
+        }
+    }
+}
+
+
+.navbar-container {
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    height: 100vh;
+    width: $left;
+    background-color: $light-blue;
+
+    display: flex;
+    flex-direction: column;
+    // align-items: center;
+    
+    .navbar-logo {
+        padding: 2.5rem;
+        text-align: center;
+        width: 100%;
+        &:hover {
+            @include pointer;
+            background-color: #145ba1;
+        }
+
+        &__img {
+            &:hover {
+                @include pointer;
+            }
+        }
+    }
+
+    .navbar {
+        margin-top: 9rem;
+
+        &-inventory, &-locations, &-users {
+            display: flex;
+            align-items: center;
+            padding: 1.5rem 4rem;
+            color: #FFFFFF75;
+
+            &:hover {
+                @include pointer;
+                background-color: #145ba1;
+                color: white;
+            }
+            &__text {
+                margin-left: 2rem;
+
+            }
+        }
+    }
+}
