@@ -3,12 +3,65 @@ $light-blue: #004892;
 $darkest-grey: #3A3A3A;
 $background-grey: #DEDEDE;
 
-// @font-face {
-//   font-family: 'Avenir Next';
-//   font-weight: 400;
-<<<<<<< HEAD
-//   src: url('./fonts/Avenir-Next.ttc') format('truetype');
-=======
-//   src: url('./Assets/Typography/Avenir Next.ttc') format('truetype');
->>>>>>> abb0755ad9819a58c031bb0126676dfb067ac27a
-// }
+@font-face {
+  font-family: 'Avenir Next';
+  font-weight: 400;
+  src: url('../fonts/Avenir-Next.ttc') format('truetype');
+}
+
+body{
+  font-family: 'Avenir Next';
+}
+
+.inventoryList {
+  background-color: #F7F7F7;
+  position: relative;
+  left: 15vw;
+  top: 15vh;
+  width: 80vw;
+}
+
+.tableContainer {
+  width: 100%;
+
+  table {
+    border: solid 2px #CACACA;
+    border-collapse: collapse;
+    width: 100%;
+    text-align: center; 
+    
+    thead > tr {
+    background-color: white;
+    border-collapse: collapse;
+    text-align: center;
+  }
+
+  .product {
+
+    h4 {
+      margin-bottom: 0;
+      color: $light-blue;
+    }
+
+    p {
+      margin-top: 0;
+      color: $background-grey;
+    }
+  }
+
+  // tbody > tr:nth-child(1n){
+  //   background-color: #ADADAD;
+  //   margin: 0;
+  // }
+
+  tbody > tr:nth-child(2n){
+    background-color: white;
+    margin: 0;
+  }
+
+  td {
+    margin: 0;
+    border-collapse: collapse;
+  }
+  }
+}

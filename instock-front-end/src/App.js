@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import './styles/App.css';
 import {BrowserRouter as Router, Route, withRouter, Switch, Redirect, Link } from 'react-router-dom';
 import WarehouseList from './Components/WarehouseList';
+
 import InventoryList from './Components/AllInventoryList';
 // import Inventory from './Components/inventory';
 // import Users from './Components/users';
@@ -9,30 +10,7 @@ import InventoryList from './Components/AllInventoryList';
 
 class App extends Component {
   state = {
-    inventory: [{
-      id: 1,
-      product: 'Product 1',
-      date: '05/24/2018',
-      location: 'Toronto, CAN',
-      quantity: '12,000',
-      status: 'In Stock'
-    },
-    { 
-     id: 2,
-    product: 'Product 2',
-    date: '05/24/2018',
-    location: 'Toronto, CAN',
-    quantity: '12,000',
-    status: 'In Stock'
-    },
-    {
-      id: 1,
-      product: 'Product 3',
-      date: '05/24/2018',
-      location: 'Toronto, CAN',
-      quantity: '12,000',
-      status: 'In Stock'
-    }],
+    inventory: [],
     warehouse: [{
       id: 1,
       title: 'Warehouse 1',
@@ -67,10 +45,17 @@ class App extends Component {
       inventory: 'Industrial, Automotive, Heavy Industry'
     }
   ]};
+
+  inventoryData = (data) => {
+    this.setState({
+      inventory: data
+    })
+  }
+
   render() {
     return (
       <div className="App">
-        {/* <Router>
+        <Router>
           <div>
             {/* <Nav /> */}
             <Switch>
@@ -78,7 +63,7 @@ class App extends Component {
                 <Route path='/warehouseList' render={(props) => 
                 {return <WarehouseList {...props} warehouseArray={this.state.warehouse}/>}}/>
                 <Route path='/inventoryList' render={(props) => 
-                {return <InventoryList {...props} inventoryArray={this.state.inventory}/>}}/>
+                {return <InventoryList {...props} inventoryArray={this.state.inventory} inventoryData={this.inventoryData}/>}}/>
                 {/* <Route path='/warehouses/:id' component = { Warehouse } /> */}
                 {/* <Route path='/inventory/:id' component = { Inventory } /> */}
                 {/* <Route path='/users' component = { Users } /> */}
@@ -86,8 +71,7 @@ class App extends Component {
               </div>
             </Switch>
           </div>
-        </Router> */}
-        <InventoryList />
+        </Router>
       </div>
     );
   }

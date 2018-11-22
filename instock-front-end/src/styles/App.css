@@ -1,1 +1,55 @@
-/* No CSS *//*# sourceMappingURL=App.css.map */
+@font-face {
+  font-family: 'Avenir Next';
+  font-weight: 400;
+  src: url("../fonts/Avenir-Next.ttc") format("truetype");
+}
+
+body {
+  font-family: 'Avenir Next';
+}
+
+.inventoryList {
+  background-color: #F7F7F7;
+  position: relative;
+  left: 15vw;
+  top: 15vh;
+  width: 80vw;
+}
+
+.tableContainer {
+  width: 100%;
+}
+
+.tableContainer table {
+  border: solid 2px #CACACA;
+  border-collapse: collapse;
+  width: 100%;
+  text-align: center;
+}
+
+.tableContainer table thead > tr {
+  background-color: white;
+  border-collapse: collapse;
+  text-align: center;
+}
+
+.tableContainer table .product h4 {
+  margin-bottom: 0;
+  color: #004892;
+}
+
+.tableContainer table .product p {
+  margin-top: 0;
+  color: #DEDEDE;
+}
+
+.tableContainer table tbody > tr:nth-child(2n) {
+  background-color: white;
+  margin: 0;
+}
+
+.tableContainer table td {
+  margin: 0;
+  border-collapse: collapse;
+}
+/*# sourceMappingURL=App.css.map */

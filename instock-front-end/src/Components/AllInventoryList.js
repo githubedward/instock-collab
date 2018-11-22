@@ -1,8 +1,14 @@
 import React, { Component } from 'react';
 
 export default class AllInventoryList extends Component {
+    componentDidMount() {
+        fetch("http://localhost:8080/inventory")
+          .then( (response) => response.json())
+          .then(data => this.props.inventoryData(data));
+          };
+      
+    
     render() {
-
         return (
             <div className='inventoryList'>
                 <div className='inventoryContainer'>
@@ -17,19 +23,25 @@ export default class AllInventoryList extends Component {
                                     <th>Quantity</th>
                                     <th>Status</th>
                                 </tr>
+                            </thead>
+                            <tbody>
+                            {this.props.inventoryArray.map(item => {
+                                return (
                                 <tr>
                                     <td>
                                         <div className='product'>
-                                            <h5>Product Name</h5>
-                                            <p>description</p>
+                                            <h4>{item.product}</h4>
+                                            <p>{item.description}</p>
                                         </div>
                                     </td>
-                                    <td>05/24/2018</td>
-                                    <td>Toronto, CAN</td>
-                                    <td>12,000</td>
-                                    <td>In Stock</td>
+                                    <td>{item.date}</td>
+                                    <td>{item.location}</td>
+                                    <td>{item.quantity}</td>
+                                    <td>{item.status}</td>
                                 </tr>
-                            </thead>
+                                )
+                            })}
+                            </tbody>
                         </table>
                     </div>
                 </div>
