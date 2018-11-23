@@ -232,3 +232,50 @@ body{
         }
     }
   }
+
+ .warehouse{
+    position: absolute;
+    top: 7rem;
+    left: 19vw;
+    width: 80vw;
+    min-height: 100vw;
+    padding: 2vw;
+    display: flex;
+    // div{
+    //     display: flex;
+    //     justify-content: space-around;
+    // }
+    .warehouse{
+        h1{
+            font-size: $h1;
+            margin-left: 5vw;
+                
+        }
+        a:link {
+            color: #003B77;
+            text-decoration: none;
+        }
+        a:visited {
+            color: #003B77;
+            text-decoration: none;
+        }   
+        .warehouseInfo{
+            margin-top: 1vw;
+            display: flex;
+            justify-content: space-around;
+            .address{
+                color:#ADADAD;
+            }
+            .contact{
+                color: #ADADAD;
+            }
+            .inventory{
+                color: #ADADAD;
+            }
+            h2{
+                font-size: $h2;
+                color: #7C7C7C;
+            }
+        }
+    }
+}

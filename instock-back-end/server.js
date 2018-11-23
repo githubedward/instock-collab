@@ -4,11 +4,11 @@ const uuidv4 = require('uuid/v4');
 const morgan = require('morgan');
 const cors = require('cors');
 const inventoryData = require('./data/inventoryData.json');
+const warehouseData = require('./data/warehouseData');
 
 const app = express();
 const port1 = 8080;
 
-const warehouseData = require('./warehouseData')
 
 const api_key = ['badgers', 'david', 'edward', 'scott'];
 
@@ -26,12 +26,7 @@ app.use(bodyParser.json());
 callback = {
     // get list of warehouses
     getAllWarehouses: (req, res, next) => {
-<<<<<<< HEAD
         res.json(warehouseData)
-=======
-        // insert your code here
-        // res.send('all warehouses')
->>>>>>> develop
     },
     getAllInventory: (req, res, next) => {
         // insert your code here

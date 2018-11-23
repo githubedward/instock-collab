@@ -220,4 +220,57 @@ body {
 .navbar-container .navbar-inventory__text, .navbar-container .navbar-locations__text, .navbar-container .navbar-users__text {
   margin-left: 2rem;
 }
+
+.warehouse {
+  position: absolute;
+  top: 7rem;
+  left: 19vw;
+  width: 80vw;
+  min-height: 100vw;
+  padding: 2vw;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.warehouse .warehouse h1 {
+  font-size: 1.5rem;
+  margin-left: 5vw;
+}
+
+.warehouse .warehouse a:link {
+  color: #003B77;
+  text-decoration: none;
+}
+
+.warehouse .warehouse a:visited {
+  color: #003B77;
+  text-decoration: none;
+}
+
+.warehouse .warehouse .warehouseInfo {
+  margin-top: 1vw;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+.warehouse .warehouse .warehouseInfo .address {
+  color: #ADADAD;
+}
+
+.warehouse .warehouse .warehouseInfo .contact {
+  color: #ADADAD;
+}
+
+.warehouse .warehouse .warehouseInfo .inventory {
+  color: #ADADAD;
+}
+
+.warehouse .warehouse .warehouseInfo h2 {
+  font-size: 1.125rem;
+  color: #7C7C7C;
+}
 /*# sourceMappingURL=App.css.map */
