@@ -14,7 +14,7 @@ $h4: 14 / 16 + rem;
 $h5: 12 / 16 + rem;
 
 // main component widths
-$right: 80vw;
+$right: 82vw;
 $left: 18vw;
 
 // mixins
@@ -28,70 +28,7 @@ $left: 18vw;
   src: url('../fonts/Avenir-Next.ttc') format('truetype');
 }
 
-body{
-  font-family: 'Avenir Next';
-}
-
-.inventoryList {
-  background-color: #F7F7F7;
-  position: absolute;
-  top: 7rem;
-  left: 19vw;
-  width: 80vw;
-  min-height: 100vh;
-}
-
-.tableContainer {
-  width: 100%;
-
-  table {
-    border: solid 2px #CACACA;
-    border-collapse: collapse;
-    width: 100%;
-    text-align: center; 
-    height: 100%;
-    
-    thead > tr {
-    background-color: white;
-    border-collapse: collapse;
-    text-align: center;
-    height: 15vh;
-  }
-  
-  .product {
-
-    h4 {
-      margin-bottom: 0;
-      color: $light-blue;
-    }
-
-    p {
-      margin-top: 0;
-      color: $background-grey;
-    }
-  }
-
-  // tbody > tr:nth-child(1n){
-  //   background-color: #ADADAD;
-  //   margin: 0;
-  // }
-
-  tbody > tr:nth-child(2n){
-    background-color: white;
-    margin: 0;
-    min-height: 5vh;
-  }
-
-  td {
-    margin: 0;
-    border-collapse: collapse;
-    height: 15vh;
-  }
-  
-}
-}
-
-// global rulesets
+// global rulesets -------------------------
 * {
     margin: 0px;
     -moz-box-sizing: border-box; 
@@ -99,6 +36,14 @@ body{
     box-sizing: border-box;
 
     font-family: arial, sans-serif; /* TEMPORARY */
+}
+
+a {
+    text-decoration: none;
+}
+
+body{
+  font-family: 'Avenir Next';
 }
 
 // component rulesets
@@ -109,78 +54,95 @@ body{
 .main {
     background-color: $background-grey; 
     width: $right;
-    position: relative;
-    top: 0px;
-    right: 0px;
-}
-
-// navbar
-.header {   
-    height: 6rem;
-    background-color: #FFFFFF;
     position: fixed;
     top: 0px;
-    right: 0px;
-    z-index: 99;
+    left: $left;
     display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 0 8rem 0 5rem;
-    width: $right;
+    flex-direction: column;
+    // align-items: flex-end;
 
-    &-search {
-        position: relative;
+    .header {   
+        height: 6rem;
+        background-color: #FFFFFF;
+        position: absolute;
+        top: 0px;
+        right: 0px;
+        z-index: 99;
         display: flex;
+        justify-content: space-between;
         align-items: center;
-
-        &__input {
-            width: 381 / 16 + rem;
-            height: 40 / 16 + rem;
-            input {
-                width: inherit;
-                height: inherit;
-                padding-left: 1rem;
-                font-size: $h4;
-                border-radius: 2px;
-                border: 1px solid #CACACA;
-                background-color: #F7F7F7;
-                &:focus {
-                    border: 1px solid $light-blue;
-                    outline: none;
+        padding: 0 8rem 0 5rem;
+        width: 100%;
+    
+        &-search {
+            position: relative;
+            display: flex;
+            align-items: center;
+    
+            &__input {
+                width: 381 / 16 + rem;
+                height: 40 / 16 + rem;
+                input {
+                    width: inherit;
+                    height: inherit;
+                    padding-left: 1rem;
+                    font-size: $h4;
+                    border-radius: 2px;
+                    border: 1px solid #CACACA;
+                    background-color: #F7F7F7;
+                    &:focus {
+                        border: 1px solid $light-blue;
+                        outline: none;
+                    }
+                }
+            }
+            &__icon {
+                position: absolute;
+                right: .5rem;
+                padding: .25rem;
+                border-radius: 25%;
+                &:hover {
+                    background-color: #CACACA;
+                    @include pointer;
                 }
             }
         }
-        &__icon {
-            position: absolute;
-            right: .5rem;
-            padding: .25rem;
-            border-radius: 25%;
-            &:hover {
-                background-color: #CACACA;
-                @include pointer;
+        &-profile {
+            display: flex;
+            align-items: center;
+    
+            &__avatar {
+                border-radius: 50%;
+                width: 36 / 16 + rem;
+                margin-right: .75rem;
+            }
+            &__dropdown {
+                padding: .75rem;
+                
+                &:hover {
+                    background-color: #CACACA;
+                    border-radius: 3px;
+                    @include pointer;
+                }
             }
         }
     }
-    &-profile {
+
+    &-titleBar {
+        // position: absolute;
         display: flex;
+        justify-content: space-between;
         align-items: center;
 
-        &__avatar {
-            border-radius: 50%;
-            width: 36 / 16 + rem;
-            margin-right: .75rem;
-        }
-        &__dropdown {
-            padding: .75rem;
-            
-            &:hover {
-                background-color: #CACACA;
-                border-radius: 3px;
-                @include pointer;
-            }
+        &__text {
+
         }
     }
+
+    
 }
+
+
 
 
 .navbar-container {
@@ -217,6 +179,7 @@ body{
         &-inventory, &-locations, &-users {
             display: flex;
             align-items: center;
+            justify-content: flex-start;
             padding: 1.5rem 4rem;
             color: #FFFFFF75;
 
@@ -231,4 +194,71 @@ body{
             }
         }
     }
+}
+
+.inventoryList {
+    background-color: #F7F7F7;
+    position: absolute;
+    top: 7rem;
+    left: 19vw;
+    width: 80vw;
+    min-height: 100vh;
   }
+
+.tableContainer {
+width: 100%;
+
+table {
+    border: solid 2px #CACACA;
+    border-collapse: collapse;
+    width: 100%;
+    text-align: center; 
+    height: 100%;
+    
+    thead > tr {
+    background-color: white;
+    border-collapse: collapse;
+    text-align: center;
+    height: 15vh;
+}
+
+.product {
+
+    h4 {
+    margin-bottom: 0;
+    color: $light-blue;
+    }
+
+    p {
+    margin-top: 0;
+    color: $background-grey;
+    }
+}
+
+// tbody > tr:nth-child(1n){
+//   background-color: #ADADAD;
+//   margin: 0;
+// }
+
+tbody > tr:nth-child(2n){
+    background-color: white;
+    margin: 0;
+    min-height: 5vh;
+}
+
+td {
+    margin: 0;
+    border-collapse: collapse;
+    height: 15vh;
+}
+
+}
+}
+
+
+
+
+
+
+
+
