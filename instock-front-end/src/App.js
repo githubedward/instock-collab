@@ -45,7 +45,7 @@ class App extends Component {
             <Switch>
                 <Route path='/' exact render={() => <Redirect to='/warehouses'/>} />
                 <Route path='/warehouses' render={(props) => 
-                {return <WarehouseList {...props} warehouseArray={this.state.warehouse}/>}}/>
+                {return <WarehouseList {...props} warehouseArray={this.state.warehouse} getWarehouseData={this.getWarehouseData} />}}/>
                 <Route path='/inventory' render={(props) => 
                 {return <InventoryList {...props} inventoryArray={this.state.inventory} getInventoryData={this.getInventoryData}/>}}/>
                 {/* <Route path='/warehouses/:id' component = { Warehouse } /> */}
