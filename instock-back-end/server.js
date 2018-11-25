@@ -20,6 +20,11 @@ app.use(express.urlencoded({extended: false}));
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
 
+// error msgs
+const apiKeyErrorMsg = {
+    Error: 'An authentication key is required. Please provide a valid API key query parameter'
+};
+
 // callback routing methods
 callback = {
     // get list of warehouses
@@ -30,12 +35,17 @@ callback = {
     getAllInventory: (req, res, next) => {
         // insert your code here
         res.json(inventoryData);
-
     },
-    getWarehouseInventory: (req, res, next) => {
+    getWarehouseInventoryList: (req, res, next) => {
         // insert your code here
-    },
-    getInventory: (req, res, next) => {
+    //     const req_key = req.query.api_key;
+    //     const { whId } = req.params;
+    //     const targetWhouse = warehouseData.find((video) => video.id === vidId);
+    //     if (!req_key || !api_key.includes(req_key)) {
+    //         res.status(401).json(apiKeyErrorMsg)
+    //     } else if ()
+    // },
+    getInventoryDetails: (req, res, next) => {
         // insert your code here
     },
     createNewWarehouse: (req, res, next) => {
@@ -51,9 +61,9 @@ app.route('/warehouses')
     .get(callback.getAllWarehouses)
     .post(callback.createNewWarehouse)
 app.get('/inventory', callback.getAllInventory);
-app.get('/warehouses/:whId', callback.getWarehouseInventory);
+app.get('/warehouses/:whId', callback.getWarehouseInventoryList);
 app.route('/inventory/:invId')
-    .get(callback.getInventory)
+    .get(callback.getInventoryDetails)
     .delete(callback.deleteItem)
 
 
