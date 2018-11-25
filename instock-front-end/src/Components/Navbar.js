@@ -17,13 +17,13 @@ export default class Navbar extends Component {
                     </Link>
                     <Link to='/warehouses'>
                         <div className="navbar-locations">
-                            <img className="navbar-location__img" src='Assets/Icons/Location.svg' alt='Location Icon' />
+                            <img className="navbar-locations__img" src='Assets/Icons/Location.svg' alt='Location Icon' />
                             <p className="navbar-locations__text">Locations</p>
                         </div>
                     </Link>
                     <Link to='/users'>
                         <div className="navbar-users">
-                            <img className="navbar-user__img" src='Assets/Icons/User.svg' alt='Users Icon' />
+                            <img className="navbar-users__img" src='Assets/Icons/User.svg' alt='Users Icon' />
                             <p className="navbar-users__text">Users</p>
                         </div>
                     </Link>
