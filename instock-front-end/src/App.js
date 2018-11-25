@@ -1,14 +1,17 @@
 import React, { Component } from 'react';
 import './styles/App.css';
-import {BrowserRouter as Router, Route, /* withRouter, */ Switch, Redirect, Link } from 'react-router-dom';
+import {BrowserRouter as Router, Route, Switch, Redirect, /* Link */ } from 'react-router-dom';
 import WarehouseList from './Components/WarehouseList';
 import InventoryList from './Components/AllInventoryList';
 import Header from './Components/Header';
 import Navbar from './Components/Navbar';
+import TitleBar from './Components/TitleBar';
 
 // import Inventory from './Components/inventory';
 // import Users from './Components/users';
 // import User from './Components/user';
+
+
 
 class App extends Component {
   state = {
@@ -28,32 +31,35 @@ class App extends Component {
     })
   }
 
+  componentDidMount() {
+  }
+
   render() {
     return (
-      <div className="App">
-        <Router>
-          <div>
-            <Navbar />
+      <Router>
+        <div className="App">
+          <Navbar />
+          <div className='main'>
             <Header />
-            <div className='main'>
-              <Switch>
-                  <Route path='/' exact render={() => <Redirect to='/warehouseList' />} />
-                  <Route path='/warehouseList' render={(props) => 
-                  {return <WarehouseList {...props} warehouseArray={this.state.warehouse} getWarehouseData={this.getWarehouseData} />}}/>
-                  <Route path='/inventoryList' render={(props) => 
-                  {return <InventoryList {...props} inventoryArray={this.state.inventory} getInventoryData={this.getInventoryData}/>}}/>
-                  {/* <Route path='/warehouses/:id' component = { Warehouse } /> */}
-                  {/* <Route path='/inventory/:id' component = { Inventory } /> */}
-                  {/* <Route path='/users' component = { Users } /> */}
-                  {/* <Route path='/users/id' component = { User }/> */}
-              </Switch>
-            </div>
-            
+            <TitleBar />
+            <Switch>
+                <Route path='/' exact render={() => <Redirect to='/warehouses'/>} />
+                <Route path='/warehouses' render={(props) => 
+                {return <WarehouseList {...props} warehouseArray={this.state.warehouse}/>}}/>
+                <Route path='/inventory' render={(props) => 
+                {return <InventoryList {...props} inventoryArray={this.state.inventory} getInventoryData={this.getInventoryData}/>}}/>
+                {/* <Route path='/warehouses/:id' component = { Warehouse } /> */}
+                {/* <Route path='/inventory/:id' component = { Inventory } /> */}
+                {/* <Route path='/users' component = { Users } /> */}
+                {/* <Route path='/users/id' component = { User }/> */}
+            </Switch>
           </div>
-        </Router>
-      </div>
+        </div>
+      </Router>
     );
   }
 }
+
+
 
 export default App;
