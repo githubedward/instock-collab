@@ -5,9 +5,9 @@ export default class Navbar extends Component {
     render() {
         return (
             <aside className="navbar-container">
-                <div className="navbar-logo">
+                <Link to='/' className="navbar-logo">
                     <img className="navbar-logo__img" src='/Assets/Wordmark/Wordmark.svg' alt='Instock Logo' />
-                </div>
+                </Link>
                 <div className='navbar'>
                     <Link to='/inventory'>
                         <div className="navbar-inventory">

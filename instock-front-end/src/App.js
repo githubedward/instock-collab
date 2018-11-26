@@ -7,6 +7,7 @@ import Header from './Components/Header';
 import Navbar from './Components/Navbar';
 import TitleBar from './Components/TitleBar';
 import WarehouseInventory from './Components/WarehouseInventory';
+import InventoryDetail from  './Components/InventoryDetail';
 
 // import Inventory from './Components/inventory';
 // import Users from './Components/users';
@@ -42,15 +43,15 @@ class App extends Component {
           <Navbar />
           <div className='main'>
             <Header />
-            <TitleBar />
+            {/* <TitleBar /> */}
             <Switch>
                 <Route path='/' exact render={() => <Redirect to='/warehouses'/>} />
                 <Route path='/warehouses/:id' exact render={(props) => <WarehouseInventory {...props} /> }/>
                 <Route path='/warehouses' exact render={(props) => 
                 {return <WarehouseList {...props} warehouseArray={this.state.warehouse} getWarehouseData={this.getWarehouseData} />}}/>
-                <Route path='/inventory' render={(props) => 
+                <Route path='/inventory' exact render={(props) => 
                 {return <InventoryList {...props} inventoryArray={this.state.inventory} getInventoryData={this.getInventoryData}/>}}/>
-                {/* <Route path='/inventory/:id' component = { Inventory } /> */}
+                <Route path='/inventory/:id' exact render={(props) => <InventoryDetail {...props} /> }/>
                 {/* <Route path='/users' component = { Users } /> */}
                 {/* <Route path='/users/id' component = { User }/> */}
             </Switch>

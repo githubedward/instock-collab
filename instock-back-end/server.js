@@ -44,9 +44,9 @@ const callback = {
     getWarehouseInventoryList: (req, res, next) => {
         // insert your code here
         const req_key = req.query.api_key;
-        const whId = Number(req.params.whId);
+        const { whId } = req.params;
         console.log(whId)
-        let targetWhouse = warehouseData.find((wHouse) => wHouse.id === whId); /* !need the updated inventory data */
+        let targetWhouse = warehouseData.find((wHouse) => wHouse.id.toString() === whId); /* !need the updated inventory data */
         console.log(targetWhouse)
         if (!req_key || !api_key.includes(req_key)) {
             res.status(401).json(errorMsg.api_key)
@@ -54,7 +54,7 @@ const callback = {
             res.status(404).json(errorMsg.locationNotFound)
         } else {
             try {
-                let targetInventory = inventoryData.filter((item) => item.warehouseId === whId)
+                let targetInventory = inventoryData.filter((item) => item.warehouseId.toString() === whId)
                 console.log(targetInventory)
                 res.json(targetInventory);
             } catch(err) {
@@ -66,13 +66,14 @@ const callback = {
         // insert your code here
         const req_key = req.query.api_key;
         const { invId } = req.params;
-        const targetItem = inventoryData.find((item) => item.id === invId);
+        const targetItem = inventoryData.find((item) => String(item.id) === invId);
         if (!req_key || !api_key.includes(req_key)) {
             res.status(401).json(errorMsg.api_key)
         } else if (!targetItem) {
             res.status(404).json(errorMsg.itemNotFound)
         } else {
             try {
+                console.log('response: ', targetItem)
                 res.json(targetItem);
             } catch(err) {
                 res.status(501).json(errorMsg.server)
@@ -83,7 +84,7 @@ const callback = {
         // insert your code here
     },
     deleteItem: (req, res, next) => {
-        // insert your code here
+        // insert your code herex
     }
 }
 
