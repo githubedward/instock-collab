@@ -3,7 +3,7 @@ const bodyParser = require('body-parser');
 const uuidv4 = require('uuid/v4');
 const morgan = require('morgan');
 const cors = require('cors');
-const inventoryData = require('./data/inventoryData.json');
+let inventoryData = require('./data/inventoryData.json');
 
 const app = express();
 const port1 = 8080;
@@ -25,7 +25,7 @@ callback = {
     // get list of warehouses
     getAllWarehouses: (req, res, next) => {
         // insert your code here
-        // res.send('all warehouses')
+        res.send('all warehouses')
     },
     getAllInventory: (req, res, next) => {
         // insert your code here
@@ -43,6 +43,13 @@ callback = {
     },
     deleteItem: (req, res, next) => {
         // insert your code here
+        // delete endpoint implemented 
+        let itemId = Number(req.params.invId);
+        let newItems = inventoryData.filter(item => {
+            return item.id !== itemId; 
+        });
+        inventoryData = newItems;
+        res.json(inventoryData);
     }
 }
 
