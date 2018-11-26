@@ -222,33 +222,36 @@ body {
 }
 
 .warehouse {
-  position: absolute;
-  top: 7rem;
-  left: 19vw;
+  background-color: #F7F7F7;
   width: 80vw;
-  min-height: 100vw;
   padding: 2vw;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  border: thin black solid;
+  margin: 2vw;
 }
 
-.warehouse .warehouse h1 {
+.warehouse h1 {
   font-size: 1.5rem;
   margin-left: 5vw;
 }
 
-.warehouse .warehouse a:link {
+.warehouse a:link {
   color: #003B77;
   text-decoration: none;
 }
 
-.warehouse .warehouse a:visited {
+.warehouse a:visited {
   color: #003B77;
   text-decoration: none;
 }
 
-.warehouse .warehouse .warehouseInfo {
+.warehouse .warehouseInfo {
   margin-top: 1vw;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -257,19 +260,19 @@ body {
       justify-content: space-around;
 }
 
-.warehouse .warehouse .warehouseInfo .address {
+.warehouse .warehouseInfo .address {
   color: #ADADAD;
 }
 
-.warehouse .warehouse .warehouseInfo .contact {
+.warehouse .warehouseInfo .contact {
   color: #ADADAD;
 }
 
-.warehouse .warehouse .warehouseInfo .inventory {
+.warehouse .warehouseInfo .inventory {
   color: #ADADAD;
 }
 
-.warehouse .warehouse .warehouseInfo h2 {
+.warehouse .warehouseInfo h2 {
   font-size: 1.125rem;
   color: #7C7C7C;
 }

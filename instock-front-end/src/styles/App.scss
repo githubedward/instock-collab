@@ -234,22 +234,16 @@ body{
   }
 
  .warehouse{
-    position: absolute;
-    top: 7rem;
-    left: 19vw;
+    background-color:#F7F7F7;
     width: 80vw;
-    min-height: 100vw;
     padding: 2vw;
     display: flex;
-    // div{
-    //     display: flex;
-    //     justify-content: space-around;
-    // }
-    .warehouse{
+    flex-direction: column;
+    border: thin black solid;
+    margin: 2vw;
         h1{
             font-size: $h1;
             margin-left: 5vw;
-                
         }
         a:link {
             color: #003B77;
@@ -278,4 +272,3 @@ body{
             }
         }
     }
-}

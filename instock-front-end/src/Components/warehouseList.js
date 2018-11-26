@@ -13,11 +13,6 @@ export default class WarehouseList extends Component {
   render() {
     let warehouseData = (data) => {
       return (
-        <div className='warehouse'>
-        <div>
-          <h1> Locations </h1>
-          <h3> Filter</h3>
-        </div>
           <div className='warehouse'>
             <Link to={'/warehouse/' + data.id}> <h1> {data.title} </h1> </Link>
             <div className='warehouseInfo'>
@@ -39,7 +34,6 @@ export default class WarehouseList extends Component {
               </div>
             </div>
           </div>
-        </div>
     )
   }
     return (
