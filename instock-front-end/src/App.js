@@ -43,7 +43,7 @@ class App extends Component {
           <Navbar />
           <div className='main'>
             <Header />
-            <TitleBar />
+            {/* <TitleBar /> */}
             <Switch>
                 <Route path='/' exact render={() => <Redirect to='/warehouses'/>} />
                 <Route path='/warehouses/:id' exact render={(props) => <WarehouseInventory {...props} /> }/>

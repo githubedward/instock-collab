@@ -48,6 +48,12 @@ $header-space: $header + $header;
     }
 }
 
+body{
+  font-family: 'Avenir Next';
+}
+
+
+
 // global rulesets -------------------------
 * {
     margin: 0px;
@@ -246,7 +252,6 @@ button {
                 }
             }
         }
-        
     }    
 
     .product-div {
@@ -395,6 +400,68 @@ $bp-2: 770px;
     }
 }
 
+// .inventoryList {
+//     background-color: #F7F7F7;
+//     position: absolute;
+//     top: 7rem;
+//     left: 19vw;
+//     width: 80vw;
+//     min-height: 100vh;
+//   }
+  
+//   .tableContainer {
+//     width: 100%;
+  
+//     .deleteIcon:hover {
+//           cursor: pointer;
+//       }
+  
+  
+//     table {
+//       border: solid 2px #CACACA;
+//       border-collapse: collapse;
+//       width: 100%;
+//       text-align: center; 
+//       height: 100%;
+      
+//       thead > tr {
+//       background-color: white;
+//       border-collapse: collapse;
+//       text-align: center;
+//       height: 15vh;
+//     }
+    
+//     .product {
+  
+//       h4 {
+//         margin-bottom: 0;
+//         color: $light-blue;
+//       }
+  
+//       p {
+//         margin-top: 0;
+//         color: $darkest-grey;
+//       }
+//     }
+  
+//     // tbody > tr:nth-child(1n){
+//     //   background-color: #ADADAD;
+//     //   margin: 0;
+//     // }
+  
+//     tbody > tr:nth-child(2n){
+//       background-color: white;
+//       margin: 0;
+//       min-height: 5vh;
+//     }
+  
+//     td {
+//       margin: 0;
+//       border-collapse: collapse;
+//       height: 15vh;
+//     }
+//    }
+//   }
 
  .warehouse{
     position: absolute;

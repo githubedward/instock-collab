@@ -3,8 +3,7 @@ const bodyParser = require('body-parser');
 const uuidv4 = require('uuid/v4');
 const morgan = require('morgan');
 const cors = require('cors');
-const inventoryData = require('./data/inventoryData.json');
-const warehouseData = require('./data/warehouseData');
+let inventoryData = require('./data/inventoryData.json');
 
 // instantiate server and assign to variable app
 const app = express();
@@ -84,7 +83,14 @@ const callback = {
         // insert your code here
     },
     deleteItem: (req, res, next) => {
-        // insert your code herex
+        // insert your code here
+        // delete endpoint implemented 
+        let itemId = Number(req.params.invId);
+        let newItems = inventoryData.filter(item => {
+            return item.id !== itemId; 
+        });
+        inventoryData = newItems;
+        res.json(inventoryData);
     }
 }
 

@@ -4,6 +4,10 @@
   src: url("../fonts/Avenir-Next.ttc") format("truetype");
 }
 
+body {
+  font-family: 'Avenir Next';
+}
+
 * {
   margin: 0px;
   -webkit-box-sizing: border-box;

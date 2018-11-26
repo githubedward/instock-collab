@@ -1,16 +1,56 @@
 import React, { Component } from 'react';
+import { FaTrashAlt } from 'react-icons/fa';
 
 export default class AllInventoryList extends Component {
+    state = {
+        inventory: []
+    }
+
+    // fetch request to grab item data to update state
     componentDidMount() {
         fetch("http://localhost:8080/inventory")
           .then( (response) => response.json())
-          .then(data => this.props.getInventoryData(data));
-          };
-      
+          .then(data => this.setState({
+              inventory: data
+          }))
+        };
     
+    // function used to pass item id to delete end point. deletes item from API
+    // and updates state
+    deleteItem = (e) => {
+        e.preventDefault();
+        let targetId = e.target.id;
+        console.log(targetId);
+        const init = {
+            method: 'DELETE'
+        }
+        fetch('http://localhost:8080/inventory/'+ targetId, init)
+        .then( (response) => {response.json()})
+        .then(data => {
+            fetch('http://localhost:8080/inventory')
+            .then(response => response.json())
+            .then(data => {
+                this.setState({
+                    inventory: data
+                })
+            })
+        })
+    }
+
+    displayInstock = (status) => {
+        if (Boolean(status) === true) {
+            return "In Stock"
+        } else return "Out of Stock"
+    }
+    
+    // returns the item data in state as a table
     render() {
         return (
-            <div className='inventoryList'>
+            <div className='displayList'>
+                <div className='main-titleBar'>
+                    <div className='main-titleBar__text'> Inventory </div>
+                    <button className='main-titleBar__button' type='button' name='filter-button'>Filter</button>
+                </div>
                 <div className='inventoryContainer'>
                     {/* <h1>Inventory</h1> */}
                     <div className='tableContainer'>
@@ -22,22 +62,29 @@ export default class AllInventoryList extends Component {
                                     <th>Location</th>
                                     <th>Quantity</th>
                                     <th>Status</th>
+                                    <th></th>
                                 </tr>
                             </thead>
                             <tbody>
-                            {this.props.inventoryArray.map(item => {
+                            {this.state.inventory.map(item => {
                                 return (
-                                <tr>
+                                <tr id={item.id}>
                                     <td>
                                         <div className='product'>
                                             <h4>{item.product}</h4>
                                             <p>{item.description}</p>
                                         </div>
                                     </td>
-                                    <td>{item.date}</td>
+                                    <td>{item.lastOrdered}</td>
                                     <td>{item.location}</td>
                                     <td>{item.quantity}</td>
-                                    <td>{item.status}</td>
+                                    <td>{this.displayInstock(item.status)}</td>
+                                    <td>
+                                        <i className='deleteIcon'>
+                                            <FaTrashAlt id={item.id}
+                                            onClick={this.deleteItem}/>
+                                        </i>
+                                    </td>
                                 </tr>
                                 )
                             })}

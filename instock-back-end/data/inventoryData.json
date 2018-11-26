@@ -7,7 +7,7 @@
     "lastOrdered": "05/24/2018",
     "location": "Toronto, CAN",
     "quantity": "12,000",
-    "status": "In Stock",
+    "status": true,
     "orderedBy": "Mark Saunders",
     "reference": "JK2020FD7811201",
     "category": "Industrial,Automotive,HeavyIndustry"
@@ -20,7 +20,7 @@
     "lastOrdered": "05/24/2018",
     "location": "Toronto, CAN",
     "quantity": "12,000",
-    "status": "In Stock",
+    "status": true,
     "orderedBy": "Mark Saunders",
     "reference": "JK2020FD7811201",
     "category": "Industrial,Automotive,HeavyIndustry"
@@ -33,7 +33,7 @@
     "lastOrdered": "05/24/2018",
     "location": "Toronto, CAN",
     "quantity": "12,000",
-    "status": "In Stock",
+    "status": true,
     "orderedBy": "Mark Saunders",
     "reference": "JK2020FD7811201",
     "category": "Industrial,Automotive,HeavyIndustry"
@@ -46,7 +46,7 @@
     "lastOrdered": "05/24/2018",
     "location": "Toronto, CAN",
     "quantity": "12,000",
-    "status": "In Stock",
+    "status": true,
     "orderedBy": "Mark Saunders",
     "reference": "JK2020FD7811201",
     "category": "Industrial,Automotive,HeavyIndustry"
@@ -59,7 +59,7 @@
     "lastOrdered": "05/24/2018",
     "location": "Toronto, CAN",
     "quantity": "12,000",
-    "status": "In Stock",
+    "status": true,
     "orderedBy": "Mark Saunders",
     "reference": "JK2020FD7811201",
     "category": "Industrial,Automotive,HeavyIndustry"
@@ -72,7 +72,7 @@
     "lastOrdered": "05/24/2018",
     "location": "Toronto, CAN",
     "quantity": "12,000",
-    "status": "In Stock",
+    "status": true,
     "orderedBy": "Mark Saunders",
     "reference": "JK2020FD7811201",
     "category": "Industrial,Automotive,HeavyIndustry"
@@ -85,7 +85,7 @@
     "lastOrdered": "05/24/2018",
     "location": "Toronto, CAN",
     "quantity": "12,000",
-    "status": "In Stock",
+    "status": true,
     "orderedBy": "Mark Saunders",
     "reference": "JK2020FD7811201",
     "category": "Industrial,Automotive,HeavyIndustry"
@@ -98,7 +98,7 @@
     "lastOrdered": "05/24/2018",
     "location": "Toronto, CAN",
     "quantity": "12,000",
-    "status": "In Stock",
+    "status": true,
     "orderedBy": "Mark Saunders",
     "reference": "JK2020FD7811201",
     "category": "Industrial,Automotive,HeavyIndustry"
@@ -111,7 +111,7 @@
     "lastOrdered": "05/24/2018",
     "location": "Toronto, CAN",
     "quantity": "12,000",
-    "status": "In Stock",
+    "status": true,
     "orderedBy": "Mark Saunders",
     "reference": "JK2020FD7811201",
     "category": "Industrial,Automotive,HeavyIndustry"
@@ -124,7 +124,7 @@
     "lastOrdered": "05/24/2018",
     "location": "Toronto, CAN",
     "quantity": "12,000",
-    "status": "In Stock",
+    "status": true,
     "orderedBy": "Mark Saunders",
     "reference": "JK2020FD7811201",
     "category": "Industrial,Automotive,HeavyIndustry"
@@ -137,7 +137,7 @@
     "lastOrdered": "05/24/2018",
     "location": "Toronto, CAN",
     "quantity": "12,000",
-    "status": "In Stock",
+    "status": true,
     "orderedBy": "Mark Saunders",
     "reference": "JK2020FD7811201",
     "category": "Industrial,Automotive,HeavyIndustry"
@@ -150,7 +150,7 @@
     "lastOrdered": "05/24/2018",
     "location": "Toronto, CAN",
     "quantity": "12,000",
-    "status": "In Stock",
+    "status": true,
     "orderedBy": "Mark Saunders",
     "reference": "JK2020FD7811201",
     "category": "Industrial,Automotive,HeavyIndustry"
@@ -163,7 +163,7 @@
     "lastOrdered": "05/24/2018",
     "location": "Toronto, CAN",
     "quantity": "12,000",
-    "status": "In Stock",
+    "status": true,
     "orderedBy": "Mark Saunders",
     "reference": "JK2020FD7811201",
     "category": "Industrial,Automotive,HeavyIndustry"
@@ -176,7 +176,7 @@
     "lastOrdered": "05/24/2018",
     "location": "Toronto, CAN",
     "quantity": "12,000",
-    "status": "In Stock",
+    "status": true,
     "orderedBy": "Mark Saunders",
     "reference": "JK2020FD7811201",
     "category": "Industrial,Automotive,HeavyIndustry"
@@ -189,7 +189,7 @@
     "lastOrdered": "05/24/2018",
     "location": "Toronto, CAN",
     "quantity": "12,000",
-    "status": "In Stock",
+    "status": true,
     "orderedBy": "Mark Saunders",
     "reference": "JK2020FD7811201",
     "category": "Industrial,Automotive,HeavyIndustry"
@@ -202,7 +202,7 @@
     "lastOrdered": "05/24/2018",
     "location": "Toronto, CAN",
     "quantity": "12,000",
-    "status": "In Stock",
+    "status": true,
     "orderedBy": "Mark Saunders",
     "reference": "JK2020FD7811201",
     "category": "Industrial,Automotive,HeavyIndustry"
@@ -215,7 +215,7 @@
     "lastOrdered": "05/24/2018",
     "location": "Toronto, CAN",
     "quantity": "12,000",
-    "status": "In Stock",
+    "status": true,
     "orderedBy": "Mark Saunders",
     "reference": "JK2020FD7811201",
     "category": "Industrial,Automotive,HeavyIndustry"
@@ -228,7 +228,7 @@
     "lastOrdered": "05/24/2018",
     "location": "Toronto, CAN",
     "quantity": "12,000",
-    "status": "In Stock",
+    "status": true,
     "orderedBy": "Mark Saunders",
     "reference": "JK2020FD7811201",
     "category": "Industrial,Automotive,HeavyIndustry"
@@ -241,7 +241,7 @@
     "lastOrdered": "05/24/2018",
     "location": "Toronto, CAN",
     "quantity": "12,000",
-    "status": "In Stock",
+    "status": true,
     "orderedBy": "Mark Saunders",
     "reference": "JK2020FD7811201",
     "category": "Industrial,Automotive,HeavyIndustry"
@@ -254,7 +254,7 @@
     "lastOrdered": "05/24/2018",
     "location": "Toronto, CAN",
     "quantity": "12,000",
-    "status": "In Stock",
+    "status": true,
     "orderedBy": "Mark Saunders",
     "reference": "JK2020FD7811201",
     "category": "Industrial,Automotive,HeavyIndustry"
@@ -267,7 +267,7 @@
     "lastOrdered": "05/24/2018",
     "location": "Toronto, CAN",
     "quantity": "12,000",
-    "status": "In Stock",
+    "status": true,
     "orderedBy": "Mark Saunders",
     "reference": "JK2020FD7811201",
     "category": "Industrial,Automotive,HeavyIndustry"
@@ -280,7 +280,7 @@
     "lastOrdered": "05/24/2018",
     "location": "Toronto, CAN",
     "quantity": "12,000",
-    "status": "In Stock",
+    "status": true,
     "orderedBy": "Mark Saunders",
     "reference": "JK2020FD7811201",
     "category": "Industrial,Automotive,HeavyIndustry"
@@ -293,7 +293,7 @@
     "lastOrdered": "05/24/2018",
     "location": "Toronto, CAN",
     "quantity": "12,000",
-    "status": "In Stock",
+    "status": true,
     "orderedBy": "Mark Saunders",
     "reference": "JK2020FD7811201",
     "category": "Industrial,Automotive,HeavyIndustry"
@@ -306,7 +306,7 @@
     "lastOrdered": "05/24/2018",
     "location": "Toronto, CAN",
     "quantity": "12,000",
-    "status": "In Stock",
+    "status": true,
     "orderedBy": "Mark Saunders",
     "reference": "JK2020FD7811201",
     "category": "Industrial,Automotive,HeavyIndustry"
