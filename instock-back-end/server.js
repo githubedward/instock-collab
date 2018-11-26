@@ -4,6 +4,7 @@ const uuidv4 = require('uuid/v4');
 const morgan = require('morgan');
 const cors = require('cors');
 let inventoryData = require('./data/inventoryData.json');
+const warehouseData = require('./data/warehouseData.json');
 
 // instantiate server and assign to variable app
 const app = express();

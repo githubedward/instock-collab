@@ -47,9 +47,9 @@ export default class AllInventoryList extends Component {
     render() {
         return (
             <div className='displayList'>
-                <div className='main-titleBar'>
-                    <div className='main-titleBar__text'> Inventory </div>
-                    <button className='main-titleBar__button' type='button' name='filter-button'>Filter</button>
+                <div className='displayList-titleBar'>
+                    <div className='displayList-titleBar__text'> Inventory </div>
+                    <button className='displayList-titleBar__button' type='button' name='filter-button'>Filter</button>
                 </div>
                 <div className='inventoryContainer'>
                     {/* <h1>Inventory</h1> */}

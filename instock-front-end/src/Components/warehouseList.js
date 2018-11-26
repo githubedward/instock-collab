@@ -8,16 +8,14 @@ export default class WarehouseList extends Component {
     fetch("http://localhost:8080/warehouses")
       .then( (response) => response.json())
       .then(data => this.props.getWarehouseData(data));
-      };
+  };
       
+  
+
   render() {
+
     let warehouseData = (data) => {
       return (
-        <div className='warehouse'>
-        <div>
-          <h1> Locations </h1>
-          <h3> Filter</h3>
-        </div>
           <div className='warehouse'>
             <Link to={'/warehouse/' + data.id}> <h1> {data.title} </h1> </Link>
             <div className='warehouseInfo'>
@@ -39,11 +37,14 @@ export default class WarehouseList extends Component {
               </div>
             </div>
           </div>
-        </div>
     )
   }
     return (
-      <div>
+      <div className='displayList'>
+          <div className='displayList-titleBar'>
+            <div className='displayList-titleBar__text'> Locations </div>
+            <button className='displayList-titleBar__button' type='button' name='filter-button'>Filter</button>
+          </div>
         { this.props.warehouseArray.map((data) => warehouseData(data))}
       </div>
     )
