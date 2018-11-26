@@ -6,6 +6,7 @@ import InventoryList from './Components/AllInventoryList';
 import Header from './Components/Header';
 import Navbar from './Components/Navbar';
 import TitleBar from './Components/TitleBar';
+import WarehouseInventory from './Components/WarehouseInventory';
 
 // import Inventory from './Components/inventory';
 // import Users from './Components/users';
@@ -44,11 +45,11 @@ class App extends Component {
             <TitleBar />
             <Switch>
                 <Route path='/' exact render={() => <Redirect to='/warehouses'/>} />
-                <Route path='/warehouses' render={(props) => 
+                <Route path='/warehouses/:id' exact render={(props) => <WarehouseInventory {...props} /> }/>
+                <Route path='/warehouses' exact render={(props) => 
                 {return <WarehouseList {...props} warehouseArray={this.state.warehouse} getWarehouseData={this.getWarehouseData} />}}/>
                 <Route path='/inventory' render={(props) => 
                 {return <InventoryList {...props} inventoryArray={this.state.inventory} getInventoryData={this.getInventoryData}/>}}/>
-                {/* <Route path='/warehouses/:id' component = { Warehouse } /> */}
                 {/* <Route path='/inventory/:id' component = { Inventory } /> */}
                 {/* <Route path='/users' component = { Users } /> */}
                 {/* <Route path='/users/id' component = { User }/> */}

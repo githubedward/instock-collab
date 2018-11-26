@@ -36,7 +36,6 @@ class TitleBar extends Component {
         }
     }
 
-
     render() {
         console.log(this.props)
       return (
@@ -47,6 +46,5 @@ class TitleBar extends Component {
         )
     }
 }
-
 
 export default withRouter(TitleBar)

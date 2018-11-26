@@ -44,15 +44,18 @@ const callback = {
     getWarehouseInventoryList: (req, res, next) => {
         // insert your code here
         const req_key = req.query.api_key;
-        const { whId } = req.params;
-        const targetWhouse = warehouseData.find((wHouse) => wHouse.id === whId); /* !need the updated inventory data */
+        const whId = Number(req.params.whId);
+        console.log(whId)
+        let targetWhouse = warehouseData.find((wHouse) => wHouse.id === whId); /* !need the updated inventory data */
+        console.log(targetWhouse)
         if (!req_key || !api_key.includes(req_key)) {
             res.status(401).json(errorMsg.api_key)
         } else if (!targetWhouse) {
             res.status(404).json(errorMsg.locationNotFound)
         } else {
             try {
-                let targetInventory = inventoryData.filter((item) => item.whId === whId)
+                let targetInventory = inventoryData.filter((item) => item.warehouseId === whId)
+                console.log(targetInventory)
                 res.json(targetInventory);
             } catch(err) {
                 res.status(501).json(errorMsg.server)
