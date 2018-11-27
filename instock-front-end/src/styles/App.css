@@ -132,15 +132,17 @@ button {
   overflow: scroll;
   height: 100%;
   background-color: #F7F7F7;
-  top: 10rem;
-  padding: .5rem 3rem;
-  width: 80vw;
+  padding: 1rem 2.5rem;
+  width: 100%;
+  margin-top: 5rem;
 }
 
 .main .displayList-titleBar {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  position: absolute;
+  top: 5rem;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
@@ -148,9 +150,11 @@ button {
       -ms-flex-align: end;
           align-items: flex-end;
   background-color: #F7F7F7;
-  padding: 0 5rem;
+  padding: 0 3rem 0 4.75rem;
+  margin-left: -2.5rem;
   min-height: 5rem;
   z-index: 99;
+  width: 100%;
 }
 
 .main .displayList-titleBar__text {

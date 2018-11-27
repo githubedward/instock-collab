@@ -34,14 +34,14 @@ const errorMsg = {
 // callback routing methods
 const callback = {
     // get list of warehouses
-    getAllWarehouses: (req, res, next) => {
+    getAllWarehouses: (req, res) => {
         res.json(warehouseData)
     },
-    getAllInventory: (req, res, next) => {
+    getAllInventory: (req, res) => {
         // insert your code here
         res.json(inventoryData);
     },
-    getWarehouseInventoryList: (req, res, next) => {
+    getWarehouseInventoryList: (req, res) => {
         // insert your code here
         const req_key = req.query.api_key;
         const { whId } = req.params;
@@ -62,7 +62,7 @@ const callback = {
             }
         }
     },
-    getInventoryDetails: (req, res, next) => {
+    getInventoryDetails: (req, res) => {
         // insert your code here
         const req_key = req.query.api_key;
         const { invId } = req.params;
@@ -80,7 +80,7 @@ const callback = {
             }
         }
     },
-    createNewWarehouse: (req, res, next) => {
+    createNewWarehouse: (req, res) => {
         // insert your code here
     },
     deleteItem: (req, res, next) => {

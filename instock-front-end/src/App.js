@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import './styles/App.css';
 import {BrowserRouter as Router, Route, Switch, Redirect, /* Link */ } from 'react-router-dom';
-import WarehouseList from './Components/WarehouseList';
+import WarehouseList from './Components/warehouseList';
 import InventoryList from './Components/AllInventoryList';
 import Header from './Components/Header';
 import Navbar from './Components/Navbar';
@@ -43,7 +43,6 @@ class App extends Component {
           <Navbar />
           <div className='main'>
             <Header />
-            {/* <TitleBar /> */}
             <Switch>
                 <Route path='/' exact render={() => <Redirect to='/warehouses'/>} />
                 <Route path='/warehouses/:id' exact render={(props) => <WarehouseInventory {...props} /> }/>

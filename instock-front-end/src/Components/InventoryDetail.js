@@ -26,7 +26,7 @@ export default class InventoryDetail extends Component {
     // }
 
     renderDetails() {
-        const { id, warehouseId, product, description, lastOrdered, location, quantity, status, orderedBy, reference, category } = this.state.itemDetail;
+        const { /* id, warehouseId, */ product, description, lastOrdered, location, quantity, status, orderedBy, reference, category } = this.state.itemDetail;
         return <div className='product-div'>
                 <Link to='/inventory' className='product-back'>
                     <img src="/Assets/Icons/Back Arrow.svg" alt="back-arrow"/> Back
